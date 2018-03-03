@@ -27,10 +27,9 @@
     "grunt-csscss": "^0.6.2",
     "grunt-cssnano": "^2.1.0",
     "grunt-mkdir": "^0.1.1",
-    "grunt-shell": "^0.6.4",
-    "grunt-prompt": "^1.1.0",
-    "grunt-notify-chrome": "^0.1.1",
     "grunt-postcss": "^0.8.0",
+    "grunt-prompt": "^1.1.0",
+    "grunt-shell": "^0.6.4",
     "jshint-stylish": "^0.1.5",
     "matchdep": "^0.3.0",
     "time-grunt": "^0.3.1"
