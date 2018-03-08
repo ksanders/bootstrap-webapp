@@ -1,7 +1,11 @@
-@import "bootstrap/bootstrap";
-@import "variables";
 @import "mixins";
 @import "fonts";
+@import "variables";
+@import "bootstrap/bootstrap";
+
 body {
-	background-color:red;
+	padding-top:76px;
+}
+.text-small {
+	font-size: 11px;
 }

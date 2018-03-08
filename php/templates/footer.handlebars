@@ -1,0 +1,14 @@
+{{# postcontent }}
+	{{& . }}
+{{/ postcontent }}
+{{# debug }}<div class="container card d-fnone"><div class="card-body"><pre class="text-small">{{ debuginfo }}</pre></div></div>
+	<script>var debugmode = true;</script>{{/ debug }}
+{{^ debug }}	<script>var debugmode = false;</script>{{/ debug }}
+{{# scripts }}
+	<script src="{{ . }}"></script>
+{{/ scripts }}
+{{# inlinescripts }}
+	<script>{{& . }}</script>
+{{/ inlinescripts }}
+  </body>
+</html>

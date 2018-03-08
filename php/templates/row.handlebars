@@ -1,0 +1,7 @@
+<div class="row{{#if rowclass}} {{ rowclass }}{{/if}}">
+{{#each content}}
+    <div class="col{{#if size}}-{{ size }}{{/if}}{{#if class}} {{ class }}{{/if}}">
+		{{{ text }}}
+	</div>
+{{/each}}
+</div>

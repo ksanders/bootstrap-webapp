@@ -1,0 +1,28 @@
+
+<nav class="navbar fixed-top navbar-expand-lg navbar-light bg-light">
+<div class="container">
+	<a class="navbar-brand" href="#">{{ title }}</a>
+	<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+		<span class="navbar-toggler-icon"></span>
+	</button>
+{{#if menu }}
+	<div class="collapse navbar-collapse" id="navbarSupportedContent">
+	    <ul class="navbar-nav mr-auto">
+{{#each menu }}
+		{{#if children }}<li class="nav-item dropdown" id="{{ id }}">
+			<a class="nav-link dropdown-toggle{{#if activechild}} active-child{{/if}}{{#if active}} active{{/if }}{{#if classes }} {{ classes }}{{/ if }}" href="#" id="navbarDropdown-{{ id }}" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"{{#attrs }} {{& attrs }} {{/ attrs }}>{{ text }}</a>
+			<div class="dropdown-menu" aria-labelledby="navbarDropdown-{{ id }}">
+				{{#each children }}
+				<a id="{{ id }}" class="dropdown-item{{# active}} active{{/ active}}{{#classes }} {{ classes }}{{/ classes }}" href="{{ url }}"{{#attrs }} {{& attrs }} {{/ attrs }}>{{ text }}</a>
+				{{/each }}
+			</div>
+		</li>
+	{{else}}
+		<li class="nav-item{{#if active}} active{{/if }}" id="{{ id }}">
+			<a href="{{ url }}" class="nav-link{{#if classes }} {{ classes }}{{/if }}"{{#if attrs }} {{& attrs }} {{/if }}>{{ text }}</a>
+		</li>
+	{{/if}}
+{{/each }}
+</ul></div>{{/if }}
+</div>
+</nav>

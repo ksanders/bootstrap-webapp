@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+{{# stylesheets }}
+	<link rel="stylesheet" href="{{ . }}">
+{{/ stylesheets }}
+    <title>{{ title }}</title>
+  </head>
+<!-- Copyright Kieran Sanders 2018 -->
+  <body class="{{# bodyclasses }}{{ . }} {{/ bodyclasses }}">
+{{# precontent }}
+{{& . }}
+{{/ precontent }}
+<div class="{{containerclass}}">
+{{#if breadcrumbs }}
+<nav aria-label="breadcrumb">
+  <ol class="breadcrumb">
+{{#each breadcrumbs }}
+<li class="breadcrumb-item{{#if active}} active{{/if}}" id="{{id}}">{{#if url}}<a href="{{url}}">{{/if}}{{text}}{{#if url}}</a>{{/if}}</li>
+{{/each}}
+  </ol>
+</nav>
+{{/ if }}
+{{# content }}
+{{& . }}
+{{/ content }}
+</div>

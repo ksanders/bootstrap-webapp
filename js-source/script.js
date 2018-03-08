@@ -1,4 +1,6 @@
-var test = 'one';
-if ('one' == test) {
-	console.log('JS loaded');
+function debuglog(message) {
+	if (debugmode) {
+		console.log(message);
+	}
 }
+debuglog('--- Debug Mode ---');
